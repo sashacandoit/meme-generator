@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+    display: flex;
+    align-content: space-between;
+}
+
+#form-section {
+    width: 30vw;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-fields {
+    box-sizing: border-box;
+    width: 100%;
+	margin-bottom: 3%;
+	padding: 2%;
+}
+
+.input-fields::placeholder {
+
+}
+
+#add-button {
+    width:100%;
+    padding: 1%;
+    font-weight: bold;
+    border-radius: 5px;
+    margin:0;
+    display:block;
+    margin-bottom: 4%;
+    background-color: rgb(64, 60, 52);
+    border: 5px solid rgb(64, 60, 52);
+    font: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;    
+    color: white;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+#add-button:hover {
+    background-color: rgb(13, 0, 0);
+    /* transition: 350ms; */
+    border: 5px solid rgb(13, 0, 0);
+    border-radius: 50px;
+    color: white;
+}
+
+#add-button:active {
+    transform: translateY(3px);
+}
+
+.meme-result {
+    width: 30vw;
+}
