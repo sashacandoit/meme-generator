@@ -1,58 +1,164 @@
 body {
     background-color: white;
-    display: flex;
-    align-content: space-between;
+    margin: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
+
 #form-section {
-    width: 30vw;
+    background-color: white;
+    justify-content: center;
+    width: 100vw;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    height: 120px;
+    text-align: center;
+    font-size: 4.5em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow: 4px 4px #F2B705;
+    color: black;
+
+}
+
+#meme-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 4%;
+    background-color: thistle;
+
 }
 
 .input-fields {
-    box-sizing: border-box;
-    width: 100%;
-	margin-bottom: 3%;
-	padding: 2%;
+    align-self: center;
+    display: block;
+    width: 75%;
+	padding: 1.5%;
+    margin-bottom: 1%;
+    font-size: 16px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    border: 2px solid black;
 }
 
 .input-fields::placeholder {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color: thistle;
 
 }
 
 #add-button {
-    width:100%;
-    padding: 1%;
-    font-weight: bold;
-    border-radius: 5px;
-    margin:0;
     display:block;
-    margin-bottom: 4%;
-    background-color: rgb(64, 60, 52);
-    border: 5px solid rgb(64, 60, 52);
-    font: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    letter-spacing: 3px;    
-    color: white;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    margin-top: 3%;
+    margin-bottom: 6%;
+    background-color: #F2B705;
+    color: black;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;    
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 7px 7px black;
     cursor: pointer;
-    transition-duration: 300ms;
+    transition-duration: 250ms;
 }
 
 #add-button:hover {
-    background-color: rgb(13, 0, 0);
-    /* transition: 350ms; */
-    border: 5px solid rgb(13, 0, 0);
-    border-radius: 50px;
-    color: white;
+    transform: translateY(-4px);
+
 }
 
 #add-button:active {
-    transform: translateY(3px);
+    transform: translateY(5px);
 }
 
+#results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 20px;
+    
+}
 .meme-result {
-    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(https://images.unsplash.com/photo-1634826389150-2ff85ca13d5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80);
+    background-size: cover;
+    background-position-y: center;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    /* border: 3px solid black; */
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 2px;
+}
+
+.delete {
+    position: absolute;
+    line-height: 26px;
+    margin: 0;
+    background-color: rgb(245, 245, 245, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: 600;
+    width: 26px;
+    height: 26px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: ;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.delete:hover {
+    background-color: #F2B705;
+    border-color: black;
+    color: black;
+}
+
+.delete:active {
+    width: 22px;
+    height: 22px;
+    box-shadow: 2px 2px black;
+}
+
+    
+
+.first-line {
+    padding-top: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.second-line {
+    align-items: flex-end;
+    padding-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
