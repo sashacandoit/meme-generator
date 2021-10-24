@@ -1,6 +1,6 @@
 const memeForm = document.querySelector('#meme-form');
 const deleteButtons = document.getElementsByClassName("delete");
-const imageURL = document.querySelector('#img-url');
+const imgInput = document.querySelector('#img-url');
 const topTextInput = document.querySelector('#top-text');
 const bottomTextInput = document.querySelector('#bottom-text');
 const memeResults = document.querySelector('#results');
@@ -14,7 +14,10 @@ memeResults.addEventListener('click', function(e) {
 function addMeme () {
     const newMeme = document.createElement('div');
     newMeme.classList.add('meme-result');
-    // memeDiv.style.backgroundImage = "url(imageURL.value)"
+    
+    const imgURL = imgInput.value;
+    // console.log(imgURL);
+    newMeme.setAttribute("style", "background-image: url(" + imgURL + ")");
     
     const topTextBox = document.createElement('span');
     topTextBox.innerText = topTextInput.value;
@@ -28,11 +31,14 @@ function addMeme () {
     deleteBtn.innerText = 'X';
     deleteBtn.classList.add('delete');
 
+    topTextInput.value = '';
+    bottomTextInput.value = '';
+    imgInput.value = '';
+
     memeResults.appendChild(newMeme);
     newMeme.appendChild(topTextBox);
     newMeme.appendChild(bottomTextBox);
     newMeme.appendChild(deleteBtn);
-
 
 }
 
